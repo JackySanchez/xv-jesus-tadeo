@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XV Jesús Tadeo - Invitación VIP Vaquera</title>
+    <!-- Fuentes elegantes de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800;900&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Iconos FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- PANTALLA DE BIENVENIDA (PRELOADER) -->
+    <div id="welcome-screen" class="welcome-screen">
+        <div class="welcome-content">
+            <div class="western-monogram"><i class="fa-solid fa-star-of-life"></i> JT <i class="fa-solid fa-star-of-life"></i></div>
+            <h1 class="gold-text">XV AÑOS</h1>
+            <h2>JESÚS TADEO</h2>
+            <p class="subtitle">SÁNCHEZ GONZÁLEZ</p>
+            <div class="divider"><i class="fa-solid fa-hat-cowboy-side"></i></div>
+            <button id="btn-enter" class="btn-premium" onclick="activarMusica()"><i class="fa-solid fa-play"></i> ENTRAR A LA INVITACIÓN</button>
+        </div>
+    </div>
+
+    <!-- PORTADA HERO (CON EL FONDO image_62846c.png) -->
+    <header class="hero-section">
+        <!-- TARJETA INVITACIÓN CENTRAL -->
+        <div class="hero-overlay">
+            
+            <p class="hero-pretitle">Estás invitado a mis</p>
+            
+            <div class="hero-number-15">15</div>
+            <div class="hero-years-script">años</div>
+            
+            <h1 class="hero-main-name">JESÚS TADEO</h1>
+            <h2 class="hero-last-name">SÁNCHEZ GONZÁLEZ</h2>
+            
+            <div class="western-divider">
+                <i class="fa-solid fa-star"></i>
+            </div>
+            
+            <!-- BLOQUE DE INFORMACIÓN PERFECTAMENTE CENTRADO -->
+            <div class="hero-info-grid">
+                
+                <!-- Fila 1: Fecha -->
+                <div class="info-row">
+                    <div class="info-icon-box">
+                        <i class="fa-regular fa-calendar-days"></i>
+                    </div>
+                    <div class="info-text-box">
+                        <span class="info-label">23 de Enero</span>
+                        <span class="info-value">Del 2027</span>
+                    </div>
+                </div>
+                
+                <!-- Fila 2: Hora -->
+                <div class="info-row">
+                    <div class="info-icon-box">
+                        <i class="fa-regular fa-clock"></i>
+                    </div>
+                    <div class="info-text-box">
+                        <span class="info-label">A las</span>
+                        <span class="info-value">7 de la Noche</span>
+                    </div>
+                </div>
+                
+                <!-- Fila 3: Lugar -->
+                <div class="info-row">
+                    <div class="info-icon-box">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div class="info-text-box">
+                        <span class="info-label">En el</span>
+                        <span class="info-value">Jardín Santa Lucía</span>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="western-divider">
+                <i class="fa-solid fa-star"></i>
+            </div>
+            
+            <p class="hero-phrase">
+                Acompáñame en esta noche tan especial que marca el inicio de una nueva etapa de mi vida.
+            </p>
+            
+            <div class="hero-bold-close">¡NO FALTES!</div>
+            
+            <a href="#contador" class="btn-premium"><i class="fa-solid fa-chevron-down"></i> CONTINUAR</a>
+
+        </div>
+    </header>
+
+    <!-- REPRODUCTOR FLOTANTE DE MÚSICA -->
+    <div class="music-player-widget" onclick="togglePlay()">
+        <button id="music-toggle" class="btn-music">
+            <i id="music-icon" class="fa-solid fa-music"></i>
+        </button>
+        <span id="music-text" class="music-status">MÚSICA: OFF</span>
+    </div>
+
+    <!-- CUENTA REGRESIVA -->
+    <section id="contador" class="countdown-section">
+        <div class="section-center-block">
+            <h2 class="section-title"><i class="fa-solid fa-clock-rotate-left"></i> EL TIEMPO CORRE</h2>
+            <p class="section-subtitle">Faltan muy pocos días para la gran fiesta</p>
+            <div class="countdown-container">
+                <div class="countdown-box">
+                    <span id="days" class="gold-text">00</span>
+                    <p>DÍAS</p>
+                </div>
+                <div class="countdown-box">
+                    <span id="hours" class="gold-text">00</span>
+                    <p>HORAS</p>
+                </div>
+                <div class="countdown-box">
+                    <span id="minutes" class="gold-text">00</span>
+                    <p>MINS</p>
+                </div>
+                <div class="countdown-box">
+                    <span id="seconds" class="gold-text">00</span>
+                    <p>SEGS</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOGÍSTICA ADICIONAL -->
+    <section id="detalles" class="details-section">
+        <div class="section-center-block">
+            <h2 class="section-title">DETALLES DE LA FIESTA</h2>
+            <div class="details-cards">
+                <div class="card">
+                    <i class="fa-solid fa-shirt gold-icon"></i>
+                    <h3>CÓDIGO DE VESTIMENTA</h3>
+                    <p class="gold-text font-bold" style="font-weight: 800; letter-spacing: 2px;">VAQUERO ELEGANTE</p>
+                    <p style="color: #9c8a75; margin-top: 5px;">Sombrero, botas y la mejor actitud vaquera.</p>
+                </div>
+            </div>
+
+            <div class="map-container">
+                <h3>Ubicación del Evento</h3>
+                <div class="map-responsive">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3600.083311685324!2d-103.501111!3d25.568333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDM0JDA2LjAiTiAxMDICsDMwJDA0LjAiVw!5e0!3m2!1ses!2smx!4v1700000000000!5m2!1ses!2smx" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <a href="https://maps.google.com" target="_blank" class="btn-premium mt-20"><i class="fa-solid fa-location-arrow"></i> ABRIR EN GOOGLE MAPS</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- MESA DE REGALOS -->
+    <section id="regalos" class="gifts-section">
+        <div class="section-center-block">
+            <div class="gifts-content">
+                <i class="fa-solid fa-gift gold-icon large"></i>
+                <h2 class="section-title">MESA DE REGALOS</h2>
+                <p class="gifts-phrase">
+                    Tu presencia es mi mayor regalo. Sin embargo, si deseas tener un detalle para recordar este momento especial, podrás hacerlo mediante sobre cerrado o transferencia bancaria.
+                </p>
+                <div class="bank-details">
+                    <h3><i class="fa-solid fa-building-columns"></i> DATOS BANCARIOS</h3>
+                    <p><strong>Banco:</strong> BBVA Bancomer</p>
+                    <p><strong>Titular:</strong> Jesús Tadeo Sánchez</p>
+                    <p><strong>Cuenta:</strong> 1234 5678 9012</p>
+                    <p><strong>CLABE:</strong> 0123 4567 8901 2345 67</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONFIRMAR ASISTENCIA (RSVP) -->
+    <section id="rsvp" class="rsvp-section">
+        <div class="section-center-block">
+            <div class="form-container">
+                <h2 class="section-title">CONFIRMAR ASISTENCIA</h2>
+                <p class="section-subtitle">Por favor, confirma tu asistencia antes del 1 de Enero de 2027</p>
+                
+                <form id="rsvpForm">
+                    <div class="form-group">
+                        <label for="nombre"><i class="fa-solid fa-user"></i> Nombre Completo</label>
+                        <input type="text" id="nombre" placeholder="Ej. Juan Pérez" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono"><i class="fa-solid fa-phone"></i> Teléfono de Contacto</label>
+                        <input type="tel" id="telefono" placeholder="Ej. 8711234567" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="personas"><i class="fa-solid fa-users"></i> Número de Acompañantes</label>
+                        <select id="personas" required>
+                            <option value="1">1 Persona (Solo yo)</option>
+                            <option value="2">2 Personas</option>
+                            <option value="3">3 Personas</option>
+                            <option value="4">4 Personas</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje"><i class="fa-solid fa-envelope-open-text"></i> Mensaje para el Festejado</label>
+                        <textarea id="mensaje" rows="3" placeholder="Escribe un lindo deseo..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-premium"><i class="fa-solid fa-paper-plane"></i> ENVIAR CONFIRMACIÓN</button>
+                    <p id="confirmacion" class="status-message"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ORDEN DEL DÍA / CRONOGRAMA -->
+    <section id="cronograma" class="timeline-section">
+        <div class="section-center-block">
+            <h2 class="section-title">ORDEN DEL DÍA</h2>
+            <p class="section-subtitle">No te pierdas de ningún momento clave</p>
+            <div class="timeline">
+                <div class="timeline-block">
+                    <div class="timeline-time">07:00 PM</div>
+                    <div class="timeline-icon"><i class="fa-solid fa-door-open"></i></div>
+                    <div class="timeline-content">
+                        <h3>RECEPCIÓN DE INVITADOS</h3>
+                        <p>Bienvenida al Jardín con set fotográfico rústico.</p>
+                    </div>
+                </div>
+                <div class="timeline-block">
+                    <div class="timeline-time">08:30 PM</div>
+                    <div class="timeline-icon"><i class="fa-solid fa-star"></i></div>
+                    <div class="timeline-content">
+                        <h3>BRINDIS & VALS</h3>
+                        <p>Momento solemne junto a los padres y padrinos.</p>
+                    </div>
+                </div>
+                <div class="timeline-block">
+                    <div class="timeline-time">09:15 PM</div>
+                    <div class="timeline-icon"><i class="fa-solid fa-utensils"></i></div>
+                    <div class="timeline-content">
+                        <h3>CENA EXCLUSIVA</h3>
+                        <p>Banquete servido en el área principal.</p>
+                    </div>
+                </div>
+                <div class="timeline-block">
+                    <div class="timeline-time">11:00 PM</div>
+                    <div class="timeline-icon"><i class="fa-solid fa-guitar"></i></div>
+                    <div class="timeline-content">
+                        <h3>GRAN BAILE</h3>
+                        <p>Apertura de pista con banda y conjunto norteño.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER FINAL -->
+    <footer class="final-footer">
+        <div class="footer-decor">
+            <i class="fa-solid fa-star"></i>
+        </div>
+        <h2>TE ESPERO</h2>
+        <p>Acompáñame a celebrar una noche que marcará el inicio de una nueva etapa en mi vida.</p>
+        <h2 class="gold-text mt-20">¡GRACIAS POR ACOMPAÑARME!</h2>
+        <p class="footer-credits">XV JESÚS TADEO • 2027</p>
+    </footer>
+
+    <!-- BOTÓN FLOTANTE WHATSAPP -->
+    <a href="https://wa.me/528711092087" target="_blank" class="whatsapp-floating">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- ELEMENTO DE AUDIO MP3 LOCAL -->
+    <audio id="bg-audio" loop preload="auto">
+        <source src="audio/musica.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- JAVASCRIPT DE CONTROL -->
+    <script>
+        const audio = document.getElementById('bg-audio');
+        const musicIcon = document.getElementById('music-icon');
+        const musicText = document.getElementById('music-text');
+
+        function activarMusica() {
+            document.getElementById('welcome-screen').style.display = 'none';
+            audio.play().then(() => {
+                musicIcon.className = "fa-solid fa-compact-disc fa-spin";
+                musicText.innerText = "MÚSICA: ON";
+            }).catch(error => {
+                console.log("Autoplay bloqueado. Esperando clic en widget.");
+            });
+        }
+
+        function togglePlay() {
+            if (audio.paused) {
+                audio.play();
+                musicIcon.className = "fa-solid fa-compact-disc fa-spin";
+                musicText.innerText = "MÚSICA: ON";
+            } else {
+                audio.pause();
+                musicIcon.className = "fa-solid fa-music";
+                musicText.innerText = "MÚSICA: OFF";
+            }
+        }
+
+        // Cuenta regresiva
+        const targetDate = new Date("January 23, 2027 19:00:00").getTime();
+        setInterval(() => {
+            const now = new Date().getTime();
+            const difference = targetDate - now;
+            if (difference > 0) {
+                document.getElementById('days').innerText = Math.floor(difference / (1000 * 60 * 60 * 24));
+                document.getElementById('hours').innerText = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                document.getElementById('minutes').innerText = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                document.getElementById('seconds').innerText = Math.floor((difference % (1000 * 60)) / 1000);
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
