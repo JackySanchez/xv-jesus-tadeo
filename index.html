@@ -11,6 +11,7 @@
 <body>
 
     <audio id="bg-audio" src="zapateado.mp3" loop preload="auto"></audio>
+
     <div id="welcome-screen" class="welcome-screen">
         <div class="parchment-poster welcome-content">
             <span class="poster-badge">Gran Jaripeo de Gala</span>
@@ -86,7 +87,7 @@
             
             <div class="poster-footer">
                 <h3>JESÚS TADEO</h3>
-                <p class="delicate-text">Delito: Cumplir sus XV años y tirar la casa por la ventana</p>
+                <p class="delicate-text">Delito: Cumplir sus XV años y tirar la house por la ventana</p>
                 
                 <div class="poster-reward-box">
                     <span class="reward-title">RECOMPENSA:</span>
@@ -177,57 +178,57 @@
         </div>
     </section>
 
-<section id="rsvp-section" class="rsvp-section">
-    <div class="parchment-poster form-container">
-        <h2 class="section-title">Confirmar Asistencia</h2>
-        
-        <p id="rsvp-instruction" class="form-desc">Asegura tu lugar en nuestro pase VIP respondiendo este formulario.</p>
-        
-        <form id="rsvpForm">
-            <div class="form-group">
-                <label for="nombre">Nombre Completo:</label>
-                <input type="text" id="nombre" placeholder="Escribe tu nombre" required>
-            </div>
+    <section id="rsvp-section" class="rsvp-section">
+        <div class="parchment-poster form-container">
+            <h2 class="section-title">Confirmar Asistencia</h2>
             
-            <div class="form-group">
-                <label for="telefono">Número de Teléfono:</label>
-                <input type="tel" id="telefono" placeholder="Ej: 8711000000" required>
-            </div>
+            <p id="rsvp-instruction" class="form-desc">Asegura tu lugar en nuestro pase VIP respondiendo este formulario.</p>
             
-            <div class="form-group">
-                <label style="margin-bottom: 5px; display: block;">Tu Pase de Acceso:</label>
-                
-                <div id="pases-display" class="pases-status-box">
-                    <span class="ticket-header">Gran Jaripeo de Gala</span>
-                    <span class="ticket-title">ADMISIÓN VIP</span>
-                    
-                    <div class="ticket-divider"></div>
-                    
-                    <div class="ticket-body">
-                        <div class="ticket-icon">
-                            <i class="fa-solid fa-ticket-simple"></i>
-                        </div>
-                        <span class="ticket-text-main">
-                            Cargando pases exclusivos...
-                        </span>
-                    </div>
-                    
-                    <span class="ticket-footer-notice">Personal no transferible</span>
+            <form id="rsvpForm">
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo:</label>
+                    <input type="text" id="nombre" placeholder="Escribe tu nombre" required>
                 </div>
                 
-                <input type="hidden" id="pases-input" value="1">
-            </div>
+                <div class="form-group">
+                    <label for="telefono">Número de Teléfono:</label>
+                    <input type="tel" id="telefono" placeholder="Ej: 8711000000" required>
+                </div>
+                
+                <div class="form-group">
+                    <label style="margin-bottom: 5px; display: block;">Tu Pase de Acceso:</label>
+                    
+                    <div id="pases-display" class="pases-status-box">
+                        <span class="ticket-header">Gran Jaripeo de Gala</span>
+                        <span class="ticket-title">ADMISIÓN VIP</span>
+                        
+                        <div class="ticket-divider"></div>
+                        
+                        <div class="ticket-body">
+                            <div class="ticket-icon">
+                                <i class="fa-solid fa-ticket-simple"></i>
+                            </div>
+                            <span class="ticket-text-main">
+                                Cargando pases exclusivos...
+                            </span>
+                        </div>
+                        
+                        <span class="ticket-footer-notice">Personal no transferible</span>
+                    </div>
+                    
+                    <input type="hidden" id="pases-input" value="1">
+                </div>
 
-            <div class="form-group">
-                <label for="mensaje">Mensaje o Felicitación (Opcional):</label>
-                <textarea id="mensaje" rows="4" placeholder="Déjale un mensaje a Jesús Tadeo..."></textarea>
-            </div>
-            
-            <button type="submit" class="btn-western layout-full">ENVIAR PASE VIP</button>
-            <p id="confirmacion" class="status-message"></p>
-        </form>
-    </div>
-</section>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje o Felicitación (Opcional):</label>
+                    <textarea id="mensaje" rows="4" placeholder="Déjale un mensaje a Jesús Tadeo..."></textarea>
+                </div>
+                
+                <button type="submit" class="btn-western layout-full">ENVIAR PASE VIP</button>
+                <p id="confirmacion" class="status-message"></p>
+            </form>
+        </div>
+    </section>
 
     <script type="module" src="firebase-config.js"></script>
     <script src="js/app.js"></script>
