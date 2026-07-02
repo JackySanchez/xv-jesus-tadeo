@@ -1,0 +1,463 @@
+/* ==========================================================================
+   PALETA DE COLORES VIEJO OESTE Y PERGAMINO REAL
+   ========================================================================== */
+:root {
+    --dark-wood: #120c08;
+    --leather-brown: #3d2314;
+    --sheriff-gold: #8b5a2b;
+    --burnt-orange: #a62626;
+    --parchment-light: #fdf5e6;
+    --parchment-border: #5c2c16;
+    --text-dark: #26140a;
+    --text-light: #f4d38a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    /* Enlace directo a tu imagen de fondo subida con un sombreado oscuro para contrastar */
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.65)), url('../img/fondoAtardecer.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* ==========================================================================
+   ESTILO NÚCLEO: EL PERGAMINO ANTIGUO (OPTIMIZADO PARA RESALTAR SOBRE EL FONDO)
+   ========================================================================== */
+.parchment-poster {
+    background: var(--parchment-light);
+    background-image: radial-gradient(rgba(0,0,0,0) 65%, rgba(139,69,19,0.12)), url('https://www.transparenttextures.com/patterns/parchment.png');
+    color: var(--text-dark) !important;
+    border: 5px solid var(--parchment-border);
+    outline: 2px dashed var(--sheriff-gold);
+    outline-offset: -10px;
+    
+    /* El truco clave: Sombra pronunciada y desenfoque de fondo para separar la tarjeta del atardecer */
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.75), inset 0 0 50px rgba(92,44,22,0.18);
+    backdrop-filter: blur(4px); 
+    -webkit-backdrop-filter: blur(4px);
+    
+    border-radius: 8px;
+    padding: 40px 25px;
+    position: relative;
+}
+
+/* Estrellitas decorativas automáticas solo para los pósters grandes */
+.parchment-poster::before, .parchment-poster::after {
+    content: '\f0a3';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    top: 12px;
+    color: var(--sheriff-gold);
+    font-size: 1.1rem;
+}
+.parchment-poster::before { left: 12px; }
+.parchment-poster::after { right: 12px; }
+
+h1, h2, h3, .poster-header {
+    font-family: 'Rye', serif;
+    letter-spacing: 1px;
+}
+
+/* Botón Vaquero Auténtico */
+.btn-western {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--parchment-border), var(--leather-brown));
+    color: var(--text-light) !important;
+    font-family: 'Rye', serif;
+    border: 2px solid var(--text-light);
+    padding: 12px 35px;
+    font-size: 1.05rem;
+    border-radius: 50px;
+    cursor: pointer;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn-western:hover {
+    transform: scale(1.03);
+    background: linear-gradient(135deg, var(--leather-brown), #120c08);
+}
+
+.layout-full { width: 100%; }
+
+/* ==========================================================================
+   PORTADA HERO TOTALMENTE ALINEADA, FLUIDA Y CON ALTO CONTRASTE
+   ========================================================================== */
+.hero-section {
+    min-height: 200vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    box-sizing: border-box;
+}
+
+.hero-overlay {
+    max-width: 800px;
+    width: 200%;
+    padding: 80px 55px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-pretitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.0rem !important;
+    font-weight: 1500;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--sheriff-gold);
+    margin: 0 0 15px 0;
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--sheriff-gold);
+    line-height: 1.2;
+}
+
+.hero-number-15 {
+    font-family: 'Rye', serif;
+    font-size: 9.0rem !important; 
+    font-weight: 2000;
+    color: var(--parchment-border);
+    line-height: 1;
+    margin: 5px 0 0 0;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.15);
+}
+
+.hero-years-script {
+    font-family: 'Rye', serif;
+    font-size: 2.2rem !important;
+    color: var(--burnt-orange);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 0 0 20px 0;
+    line-height: 1.1;
+}
+
+.hero-main-name {
+    font-family: 'Rye', serif;
+    font-size: 5.0rem !important; 
+    font-weight: 2500;
+    color: var(--text-dark);
+    line-height: 1.2;
+    margin: 10px 0 0 0;
+    letter-spacing: 1px;
+}
+
+.hero-last-name {
+    font-family: 'Cinzel', serif;
+    font-size: 1.3rem !important;
+    color: var(--parchment-border);
+    letter-spacing: 5px;
+    font-weight: 1500;
+    margin: 5px 0 15px 0;
+    text-transform: uppercase;
+    line-height: 1.3;
+}
+
+.divider-rope {
+    width: 250px;
+    margin: 15px auto;
+    display: block;
+}
+
+.hero-phrase {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.5;
+    font-style: italic;
+    max-width: 1000px;
+    margin: 0 auto 25px auto;
+}
+
+.hero-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 15px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.info-row {
+    background: rgba(139, 69, 19, 0.06);
+    border: 1px dashed var(--parchment-border);
+    padding: 15px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-icon-box { font-size: 1.5rem; color: var(--parchment-border); margin-bottom: 5px; }
+.info-label { font-size: 0.75rem; text-transform: uppercase; color: #666; font-weight: bold; }
+.info-value { font-size: 1.05rem; font-weight: 700; color: #000; margin-top: 2px; }
+.hero-bold-close { font-size: 1.5rem; color: var(--burnt-orange); margin-bottom: 25px; letter-spacing: 2px; }
+
+/* ==========================================================================
+   OTRAS SECCIONES Y COMPONENTES
+   ========================================================================== */
+.global-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.welcome-screen {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.95));
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome-content {
+    max-width: 440px;
+    width: 90%;
+    text-align: center;
+}
+
+.poster-badge {
+    font-family: 'Rye', serif;
+    color: var(--sheriff-gold);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.main-title { font-size: 2.8rem; color: var(--parchment-border); margin: 5px 0; }
+.western-divider { width: 60%; height: 2px; background: var(--parchment-border); margin: 5px auto 12px auto; }
+.guest-name { font-family: 'Cinzel', serif; font-weight: 900; font-size: 1.6rem; color: #1a1a1a; }
+.subtitle { font-size: 0.85rem; font-weight: 700; letter-spacing: 2px; color: #555; text-transform: uppercase; margin-bottom: 15px; }
+.icon-decor-img { width: 40px; margin: 10px 0; }
+.welcome-message { font-style: italic; color: #3f2214; font-size: 0.95rem; margin-bottom: 25px; line-height: 1.4; }
+
+/* Cuenta Regresiva */
+.countdown-section { padding: 40px 20px; display: flex; justify-content: center; }
+.countdown-wrap { max-width: 600px; width: 100%; text-align: center; padding: 30px 20px; }
+.section-title { font-size: 2rem; color: var(--parchment-border); margin-bottom: 20px; text-transform: uppercase; text-align: center; }
+.text-light { color: var(--text-light) !important; text-shadow: 2px 2px 5px rgba(0,0,0,0.9); }
+.section-subtitle { text-align: center; color: #fff; margin:-10px auto 35px auto; font-size: 1rem; text-shadow: 1px 1px 3px rgba(0,0,0,0.8); }
+.countdown-container { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+.countdown-box { background: var(--parchment-border); color: var(--text-light); padding: 15px; min-width: 90px; border-radius: 4px; border: 1px solid var(--text-light); box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+.countdown-box span { font-size: 2rem; font-family: 'Rye', serif; display: block; }
+.countdown-box p { font-size: 0.75rem; text-transform: uppercase; }
+
+/* Sección Wanted Poster */
+.wanted-section { padding: 60px 20px; display: flex; justify-content: center; }
+.wanted-poster { max-width: 360px; width: 100%; text-align: center; padding: 35px 25px; }
+.poster-header { font-size: 3.5rem; color: var(--parchment-border); letter-spacing: 2px; line-height: 1; }
+.poster-subheader { font-size: 0.85rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; color: #555; margin-bottom: 20px; }
+.poster-image-container { width: 190px; height: 220px; margin: 0 auto 20px auto; border: 3px solid var(--parchment-border); box-shadow: 0 4px 10px rgba(0,0,0,0.2); overflow: hidden; }
+.poster-photo { width: 100%; height: 100%; object-fit: cover; }
+.wanted-poster h3 { font-size: 1.8rem; color: #000; margin-bottom: 5px; }
+.delicate-text { font-size: 0.85rem; color: #444; font-weight: 600; line-height: 1.3; max-width: 250px; margin: 0 auto 15px auto; }
+.poster-reward-box { background: rgba(166, 38, 38, 0.06); border-top: 2px dashed var(--text-dark); border-bottom: 2px dashed var(--text-dark); padding: 10px 0; margin-bottom: 15px; }
+.reward-title { font-size: 0.75rem; font-weight: bold; display: block; letter-spacing: 1px; color: #555; }
+.reward-amount { font-family: 'Rye', serif; font-size: 1.4rem; color: var(--burnt-orange); display: block; margin-top: 2px; }
+.poster-date { font-family: 'Cinzel', serif; font-weight: 900; font-size: 1rem; letter-spacing: 1px; color: var(--parchment-border); }
+
+/* Ubicación y Tarjetas */
+.details-section-custom { padding: 60px 20px; }
+.custom-grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 30px; margin-top: 20px; }
+.custom-card { text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; }
+.custom-card h3 { color: var(--parchment-border); font-size: 1.3rem; margin: 15px 0 10px 0; font-family: 'Cinzel', serif; font-weight: 700; }
+.card-icon-img { width: 70px; height: auto; }
+.large-icon { font-size: 4rem; color: var(--parchment-border); }
+.location-venue { font-weight: bold; color: var(--burnt-orange); margin-bottom: 2px; }
+.location-city { font-size: 0.9rem; color: #555; margin-bottom: 15px; }
+.map-responsive { width: 100%; height: 180px; border-radius: 6px; border: 1px solid var(--parchment-border); overflow: hidden; margin-top: auto; }
+.dress-code-title { font-weight: bold; color: var(--sheriff-gold); text-transform: uppercase; margin-bottom: 15px; letter-spacing: 1px; }
+.dress-code-text { font-size: 0.9rem; color: #444; line-height: 1.5; max-width: 260px; }
+
+/* Mesa de Regalos */
+.gifts-section { padding: 60px 20px; display: flex; justify-content: center; }
+.gift-card-premium { max-width: 600px; width: 100%; text-align: center; }
+.gift-img-decor { width: 200px; height: auto; margin-bottom: 20px; }
+.gift-card-premium h3 { color: var(--parchment-border); margin-bottom: 15px; }
+.gift-text { font-size: 0.95rem; color: #333; line-height: 1.6; }
+.bank-details { background: rgba(0,0,0,0.04); border: 2px dashed var(--parchment-border); padding: 20px; text-align: left; width: 100%; margin-top: 20px; color: var(--text-dark); }
+.bank-details p { margin-bottom: 6px; font-size: 0.95rem; }
+
+/* Cronograma */
+.timeline-section-custom { padding: 60px 20px; }
+.timeline-container-premium { max-width: 600px; margin: 30px auto 0 auto; position: relative; padding-left: 35px; }
+.timeline-container-premium::before { content: ''; position: absolute; left: 12px; top: 0; bottom: 0; width: 3px; background: var(--text-light); box-shadow: 0 0 8px rgba(0,0,0,0.5); }
+.timeline-row-item { text-align: left; margin-bottom: 30px; padding: 20px; border-left: 5px solid var(--parchment-border); }
+.timeline-row-item::before, .timeline-row-item::after { display: none !important; } 
+.timeline-bullet-icon { position: absolute; left: -34px; top: 18px; background: var(--leather-brown); border: 2px solid var(--text-light); color: var(--text-light); width: 30px; height: 30px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 0.8rem; z-index: 5; box-shadow: 0 3px 6px rgba(0,0,0,0.4); }
+.time-badge { font-family: 'Rye', serif; font-size: 1rem; color: var(--burnt-orange); display: inline-block; margin-bottom: 5px; }
+.timeline-row-item h3 { font-size: 1.2rem; color: #000; margin-bottom: 5px; font-family: 'Cinzel', serif; font-weight: bold; }
+.timeline-row-item p { font-size: 0.9rem; color: #555; line-height: 1.4; }
+
+/* Formulario RSVP */
+.rsvp-section { padding: 60px 20px; display: flex; justify-content: center; }
+.form-container { max-width: 550px; width: 100%; padding: 40px 30px; }
+.form-desc { text-align: center; color: #555; margin:-10px auto 25px auto; font-size: 0.95rem; }
+.form-group { text-align: left; margin-bottom: 20px; }
+.form-group label { display: block; font-size: 0.85rem; font-weight: bold; color: var(--parchment-border); margin-bottom: 8px; text-transform: uppercase; }
+.form-group input, .form-group textarea { width: 100%; background: rgba(250, 240, 215, 0.8); border: 1px solid var(--parchment-border); padding: 12px; color: #000; font-family: inherit; border-radius: 4px; font-size: 0.95rem; }
+.form-group input:focus, .form-group textarea:focus { outline: 2px solid var(--sheriff-gold); background: #fff; }
+.status-message { margin-top: 15px; font-weight: bold; font-size: 1rem; text-align: center; }
+
+/* Widget de Audio Flotante Redondo */
+.music-player-widget { position: fixed; bottom: 25px; left: 25px; background: var(--parchment-light); border: 2px solid var(--parchment-border); padding: 8px 18px; border-radius: 30px; display: flex; align-items: center; gap: 10px; z-index: 10000; box-shadow: 0 6px 20px rgba(0,0,0,0.5); cursor: pointer; color: var(--text-dark); }
+.btn-music { background: var(--parchment-border); border: none; width: 35px; height: 35px; border-radius: 50%; color: var(--text-light); display: flex; justify-content: center; align-items: center; font-size: 1rem; cursor: pointer; }
+.music-status { font-size: 0.75rem; font-weight: bold; letter-spacing: 1px; }
+
+/* Footer */
+.final-footer { padding: 50px 20px; background: rgba(18, 12, 8, 0.96); text-align: center; border-top: 3px solid var(--text-light); position: relative; }
+.footer-copy { color: #aaa; font-size: 0.85rem; }
+.footer-decor { margin-top: 15px; }
+.cactus-footer-img { width: 80px; height: auto; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.5)); }
+
+/* ==========================================================================
+   RESPONSIVO EXCLUSIVO AJUSTADO PARA MÓVILES
+   ========================================================================== */
+@media screen and (max-width: 600px) {
+    .main-title { font-size: 2.2rem; }
+    .hero-overlay { padding: 35px 20px; width: 95%; }
+    .hero-pretitle { font-size: 0.95rem !important; letter-spacing: 3px; margin-bottom: 10px; }
+    .hero-number-15 { font-size: 5rem !important; }
+    .hero-years-script { font-size: 1.8rem !important; margin-bottom: 15px; }
+    .hero-main-name { font-size: 2.2rem !important; }
+    .hero-last-name { font-size: 1.05rem !important; letter-spacing: 3px; }
+    
+    .poster-header { font-size: 3rem; }
+    .section-title { font-size: 1.6rem; }
+    .parchment-poster { padding: 30px 15px; width: 95%; margin-left: auto; margin-right: auto; }
+    .custom-grid-container { grid-template-columns: 1fr; gap: 20px; }
+    .timeline-container-premium { padding-left: 25px; }
+    .timeline-bullet-icon { left: -29px; }
+    .poster-image-container { width: 160px; height: 190px; }
+}
+
+/* ==========================================================================
+   PASE VIP VAQUERO PREMIUM (DISEÑO ELABORADO ESTILO BOLETO ANTIGUO)
+   ========================================================================== */
+.pases-status-box {
+    position: relative;
+    background: #fbf0d9;
+    background-image: radial-gradient(rgba(0,0,0,0) 60%, rgba(92,44,22,0.08)), url('https://www.transparenttextures.com/patterns/parchment.png');
+    border: 3px solid #5c2c16;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin: 15px 0;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25), inset 0 0 30px rgba(92,44,22,0.1);
+    overflow: hidden;
+    display: block;
+    text-align: center;
+}
+
+/* Esquinas recortadas típicas de boleto vintage mediante círculos simulados */
+.pases-status-box::before, .pases-status-box::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 24px;
+    height: 24px;
+    background: #fdf5e6; /* Cambiar si tu fondo de pergamino general usa otro tono */
+    border: 3px solid #5c2c16;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+.pases-status-box::before {
+    left: -15px;
+    box-shadow: inset -4px 0 8px rgba(0,0,0,0.1);
+}
+.pases-status-box::after {
+    right: -15px;
+    box-shadow: inset 4px 0 8px rgba(0,0,0,0.1);
+}
+
+/* Encabezado interno del Boleto */
+.ticket-header {
+    font-family: 'Rye', serif;
+    font-size: 0.85rem;
+    color: #a62626;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    display: block;
+    margin-bottom: 4px;
+}
+
+/* Título Principal de Admisión */
+.ticket-title {
+    font-family: 'Rye', serif;
+    font-size: 1.7rem;
+    color: #26140a;
+    line-height: 1.1;
+    display: block;
+    text-shadow: 1px 1px 0px rgba(255,255,255,0.8);
+}
+
+/* Divisor punteado interno estilo cupón desprendible */
+.ticket-divider {
+    border-top: 2px dashed #8b5a2b;
+    margin: 12px auto;
+    width: 85%;
+    position: relative;
+}
+
+/* Contenido dinámico donde se muestra la cantidad de pases */
+.ticket-body {
+    display: block;
+    padding: 5px 0;
+}
+
+.ticket-icon {
+    font-size: 2rem;
+    color: #8b5a2b;
+    margin-bottom: 6px;
+    animation: pulse-gold 3s infinite ease-in-out;
+}
+
+.ticket-text-main {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.05rem;
+    color: #26140a;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.ticket-text-main strong {
+    font-family: 'Rye', serif;
+    font-size: 1.4rem;
+    color: #a62626;
+    display: inline-block;
+    padding: 0 4px;
+}
+
+.ticket-footer-notice {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #666;
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+}
+
+/* Animación sutil de respiración para la herradura/boleto */
+@keyframes pulse-gold {
+    0% { transform: scale(1); opacity: 0.9; }
+    50% { transform: scale(1.08); color: #a62626; opacity: 1; }
+    100% { transform: scale(1); opacity: 0.9; }
+}
